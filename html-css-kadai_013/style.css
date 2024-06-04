@@ -1,134 +1,272 @@
-/* PC、スマホ共通スタイル */
+* {
+  box-sizing: border-box;
+}
+/* PC、スマホ共通設定 */
 body {
-  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
-    sans-serif;
+  font-family: "Noto sans Japanese",sans-serif;
+  color: #000000;
+  background-color: #ffffff;
 }
 
-p {
-  font-size: 15px;
-}
-
-#main-visual>img {
-  width: 100%;
-}
-
-/*================
-PC用のスタイル 
-=================*/
+/* pc用設定 */
 @media screen and (min-width: 768px) {
-  /* 横幅設定 */
+  /* pc用のスタイルを指定する */
+/* 横幅調整 */
   body {
-    max-width: 1080px;
+    max-width: 1440px;
     min-width: 960px;
     margin: 0 auto 0 auto;
   }
 
-  /* ヘッダー */
-  header {
+  /* header装飾 */
+  #header-box {
+    width: 980px;
+    margin: 0 auto;
+    padding: 32px 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* flex-wrap: wrap; */
+    font-size: 34px;
   }
 
-  /* ナビゲーションのレイアウト */
-  #nav-pc {
-    text-align: right;
-    font-size: 14px;
-    padding-top: 15px;
-  }
-
-  /* ナビゲーションのリンクの装飾設定 */
-  #nav-pc>a {
+  #link-index a:link {
     text-decoration: none;
-    margin-left: 20px;
+      color: #000000;
+  }
+  #link-index a:visited {
+    color: #000000;
   }
 
-  #nav-pc>a:link {
-    color: #0d0d0d;
+  #link-index {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  padding: 3px, 19px, 3px, 19px;
+  margin: 10px;
   }
 
-  #nav-pc>a:visited {
-    color: #0d0d0d;
+  #link-div {
+    margin: 18px;
+    
   }
-
-  #nav-pc>a:hover {
-    color: #0d0d0d;
+  #link-about {
+    margin: auto;
+  }
+  #link-div a:link {
+    text-decoration: none;
+    color: #000000;
+  }
+  #link-div a:visited {
+    color: #000000;
+  }
+  #link-div a:hover {
     text-decoration: underline;
   }
 
-  #nav-pc>a:active {
-    color: #0d0d0d;
-  }
-
-  #menu-sp {
-    display: none;
-  }
-
-  #nav-sp {
-    display: none;
-  }
-}
-/*============= 
-スマホ用スタイル
-================ */
-@media screen and (max-width: 768px) {
-  body {
-    min-width: 375px;
+  #link-works {
     margin: 0;
   }
-  /* スマホ表示時のPC用ナビゲーション非表示 */
-  #nav-pc {
-    display: none;
-  }
-  /* ハンバーガーメニュー */
-  #menu-sp {
-    float: right;
-    padding: 0;
-  }
-  /* スマホ用ナビゲーション */
-  #nav-sp {
-    background-color: #ce933e;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+
+
+  #main-visual{
     width: 100%;
-    z-index: 100;
+    margin:0 auto;
   }
-  /* Xボタン表示 */
-  #close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+
+  #main-visual > img {
+    width: 100%;
   }
-  /* ナビゲーション用ロゴ */
-  #logo-sp {
-    margin: 80px 0px 30px 20px;
+  /* about */
+  #about {
+    margin: 72.24px auto 0 auto;
+
   }
-  /* ナビゲーションリンク設定 */
-  #nav-sp > a {
-    display: block;
+  .index-h1 {
+    font-size: 34px;
+    text-align: center;
+    margin: 0 auto;
   }
-  #nav-sp > a:link {
-    color: #ffffff;
+
+  #about-contents {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 0 auto;
+
   }
-  #nav-sp > a:visited {
-    color: #ffffff;
+
+  #about-contents > img {
+    border-radius: 50%;
   }
-  #nav-sp > a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+
+
+  #about-contents > h2 {
+    font-size: 24px;
   }
-  #nav-sp > a:active {
-    color: #ffffff;
+
+  #about-text {
+    font-size: 18px;
+    margin-left: 14px;
   }
-  #nav-sp > .menu {
+
+  #works {
+    margin: 87px auto 0 auto;
+  }
+
+  #works-box {
+    display: flex;
+    justify-content:center;
+    margin: 16px auto;
+
+  }
+
+  .works-contents {
+    margin: 10px auto;
+    width: 30%;
+  }
+
+  .works-contents > img {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .works-contents > p {
+
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+ 
+  }
+
+footer {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  }
+
+  footer > p {
+    font-size: 18px;
+    margin: 0 auto;
+
+  }
+
+}
+
+/* スマホ設定*/
+@media screen and (max-width: 767px) {
+  /* pc用のスタイルを指定する */
+  /* 横幅調整 */
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    margin: 0;
+  }
+
+  #header-box {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  #link-index a:link {
     text-decoration: none;
-    display: block;
-    margin: 0 20px;
-    height: 44px;
-    font-size: 16px;
-    background-image: url("images/arrow.png");
-    background-repeat: no-repeat;
-    background-position: right top;
+      color: #000000;
   }
+
+  #link-index {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    padding: 3px, 19px, 3px, 19px;
+    margin: 10px;
+    font-size: 28px;
+  }
+
+  #link-div {
+    font-size: 18px;
+  }
+
+  #link-div a:link {
+    text-decoration: none;
+    color: #000000;
+  }
+  #link-div a:visited {
+    color: #000000;
+  }
+
+  #main-visual >img {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  #about {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto 0 auto;
+  }
+  #about-contents {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #about-contents > img {
+    border-radius: 50%;
+    margin-top: 50px;
+  }
+  
+  #about > h1 {
+    margin-bottom: 0;
+    }
+
+  #works {
+    margin: 0;
+  }
+
+
+  #works > h1 {
+    text-align: center;
+    margin: 50px auto 10px auto;
+  }
+
+  #works-box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .works-contents {
+    margin: 0 auto;
+  }
+  
+  .works-contents > p {
+    margin: 5px auto 20px auto;
+    width: 100%;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  footer > p {
+    margin-bottom: 5px;
+  }
+
 }
